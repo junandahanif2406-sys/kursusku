@@ -1,9 +1,26 @@
-@import 'tailwindcss';
+@import 'bootstrap/dist/css/bootstrap.min.css';
+body {
+    background: #f7f8fa;
+}
+.navbar-brand {
+    font-weight: 800;
+}
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
+:root {
+    --brand-blue: #0d47a1;
+}
 
-@theme {
-    --font-sans: 'Instrument Sans', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-        'Segoe UI Symbol', 'Noto Color Emoji';
+h1, h2, h3, h4, h5 {
+    color: var(--brand-blue);
+}
+
+.course-card {
+    border: 0;
+    border-top: 4px solid var(--brand-blue);
+    transition: transform .2s, box-shadow .2s;
+}
+
+.course-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 .75rem 1.5rem rgba(13, 71, 161, .2) !important;
 }
