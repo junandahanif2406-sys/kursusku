@@ -10,6 +10,15 @@ use Illuminate\Validation\Rule;
 
 class EnrollmentController extends Controller
 {
+    public function index()
+    {
+        $enrollments = Enrollment::with(['participant', 'course'])
+            ->latest()
+            ->get();
+
+        return view('enrollments.index', compact('enrollments'));
+    }
+
     public function create()
     {
         $participants = Participant::orderBy('name')->get();

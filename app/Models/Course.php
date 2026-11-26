@@ -24,6 +24,7 @@ class Course extends Model
              'start_date' => 'date',
         ];
     }   
+    
     public function enrollments(): HasMany
     {
         return $this->hasMany(Enrollment::class);
