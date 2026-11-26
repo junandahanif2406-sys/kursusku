@@ -1,6 +1,6 @@
 @import 'bootstrap/dist/css/bootstrap.min.css';
 body {
-    background: #f7f8fa;
+    background: #ffffff;
 }
 .navbar-brand {
     font-weight: 800;
@@ -22,5 +22,41 @@ h1, h2, h3, h4, h5 {
 
 .course-card:hover {
     transform: translateY(-6px);
-    box-shadow: 0 .75rem 1.5rem rgba(13, 71, 161, .2) !important;
+    box-shadow: 0 .75rem 1.5rem rgba(255, 255, 255, 0.2) !important;
+}
+
+.course-card {
+    transition: transform .25s ease, box-shadow .25s ease;
+    cursor: pointer;
+}
+.course-card:hover,
+.course-card:focus-within {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 2rem rgba(255, 2, 2, 0.15) !important;
+}
+.course-card.selected {
+    transform: translateY(-10px);
+    box-shadow: 0 1rem 2rem rgba(25, 135, 84, .3) !important;
+    outline: 2px solid #198754;
+}
+
+.course-card {
+    background-color: lch(90.97% 13.14 247.81); /* hijau muda */
+}
+
+/* header tabel */
+.table thead th {
+    background-color: #0d47a1;
+    color: #fff;
+}
+
+/* baris saat disorot */
+.table tbody tr:hover {
+    background-color: #add1f6;
+}
+
+/* tombol Cari dan Tambah */
+.btn-primary {
+    background-color: #5bc2eb;
+    border-color: #4ea1e5;
 }
